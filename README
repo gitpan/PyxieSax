@@ -1,0 +1,91 @@
+            'PyxieSax' perl modules. Version 0.32.
+
+XML::Parser::PyxParser
+  Convert ESIS of Nsgmls or Pyxie to Perl SAX events.
+XML::Handler::PyxWriter
+  Convert Perl SAX events to ESIS of Nsgmls or Pyxie.
+
+  These modules are part of XmlConnect project. The goal of the project
+is to transfer XML data between applications with overheads minimized.
+Modules use subset of Nsgmls output format and are compatible with
+Pyxie notation.
+
+
+
+         Installation.
+
+perl Makefile.PL
+make
+make install
+  Or simple copy 'pm/XML' directory to your $SITE_LIB/XML directory.
+
+
+         Documentation.
+
+  Available as POD in modules.
+
+
+         "Hello world" test.
+
+  General grepping usage of PYX notation is
+<some program with PYX output> | grep '^-' | <some program with PYX input>.
+"grep '^-'" for PYX can be considered as "Hello world" example for
+programming languages.
+  Our test gets PYX from 'hello.sgml' file and converts grepped
+stream to canonical XML.
+  Files:
+hello/test          --  The test.
+hello/hello.sgml    --  Input SGML file for testing.
+hello/hello.struct  --  Structure of test SGML file.
+                        To be compared with test output.
+
+
+         ESIS to canonical XML.
+
+  We use "XML::Handler::CanonXMLWriter" module to write XML.
+This module belongs to "libxml-perl" module.
+  Files:
+canon/canon.pl  --  The program.
+canon/n2c       --  Interface to 'canon.pl' program.
+                    Convert ESIS of Nsgmls to canonical XML.
+canon/p2c       --  Interface to 'canon.pl' program.
+                    Convert ESIS of Pyxie to canonical XML.
+canon/test      --  The test.
+canon/hello.nsgmls.esis   --  ESIS stream of Nsgmls for testing.
+canon/hello.pyxie.esis    --  ESIS stream of Pyxie for testing.
+canon/hello.canon.xml     --  Canonical XML for "hello" ESIS streams.
+                              To be compared with test output.
+
+
+         Convert ESIS of Nsgmls to ESIS of Pyxie and back.
+
+  Files:
+conv/conv.pl    --  The program.
+conv/n2p        --  Interface to 'conv.pl' program.
+                    Convert ESIS of Nsgmls to ESIS of Pyxie.
+conv/p2n        --  Interface to 'conv.pl' program.
+                    Convert ESIS of Pyxie to ESIS of Nsgmls.
+conv/test       --  The test.
+conv/hello.nsgmls.esis   --  ESIS stream of Nsgmls for testing.
+conv/hello.pyxie.esis    --  ESIS stream of Pyxie for testing.
+
+
+
+          See also.
+
+++ http://beta.math.spbu.ru/~prof/xc/
+++ Nsgmls
+++ http://www.pyxie.org/
+++ XML::PerlSAX
+++ XML::PYX
+++ XML::Parser::ESISParser
+++ SGMLS
+
+
+          Copyright.
+
+Copyright (C) 2000 Oleg A. Paraschenko (prof@beta.math.spbu.ru)
+PyxieSax modules are free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
+

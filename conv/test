@@ -1,0 +1,8 @@
+#
+# Test converters from Nsgmls ESIS to Pyxie ESIS and back.
+#
+
+./n2p  hello.nsgmls.esis  hello.pyxie.esis.test
+./p2n  hello.pyxie.esis   hello.nsgmls.esis.test
+diff  hello.nsgmls.esis  hello.nsgmls.esis.test
+diff  hello.pyxie.esis   hello.pyxie.esis.test

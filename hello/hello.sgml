@@ -1,0 +1,22 @@
+<!DOCTYPE hello [
+<!ELEMENT para  - - (#PCDATA)>
+<!ATTLIST para
+  align  (left|center|right) #IMPLIED
+>
+<!ELEMENT hello - - (para*)>
+]>
+
+<hello>
+  <?hello world?>
+  <para align="left">Hello, world!</para>
+  <?hello test?>
+  <para align="right">Next paras contain special characters</para>
+  <para align="center"><![CDATA[<\>	</>]]></para>
+  <para><![CDATA[<\>
+</>]]></para>
+  <para><![CDATA[<\>&#9;</>]]></para>
+  <para><![CDATA[<\>&#10;</>]]></para>
+  <para><![CDATA[<\>&#13;</>]]></para>
+  <para align="center"><![CDATA[<\>"</>]]></para>
+</hello>
+

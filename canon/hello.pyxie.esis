@@ -1,0 +1,32 @@
+(HELLO
+?hello world
+(PARA
+AALIGN LEFT
+-Hello, world!
+)PARA
+?hello test
+(PARA
+AALIGN RIGHT
+-Next paras contain special characters
+)PARA
+(PARA
+AALIGN CENTER
+-<\\>\011</>
+)PARA
+(PARA
+-<\\>\015</>
+)PARA
+(PARA
+-<\\>\011</>
+)PARA
+(PARA
+-<\\>\012</>
+)PARA
+(PARA
+-<\\>\015</>
+)PARA
+(PARA
+AALIGN CENTER
+-<\\>"</>
+)PARA
+)HELLO

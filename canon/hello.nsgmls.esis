@@ -1,0 +1,32 @@
+(HELLO
+?hello world
+AALIGN CDATA LEFT
+(PARA
+-Hello, world!
+)PARA
+?hello test
+AALIGN CDATA RIGHT
+(PARA
+-Next paras contain special characters
+)PARA
+AALIGN CDATA CENTER
+(PARA
+-<\\>\011</>
+)PARA
+(PARA
+-<\\>\015</>
+)PARA
+(PARA
+-<\\>\011</>
+)PARA
+(PARA
+-<\\>\012</>
+)PARA
+(PARA
+-<\\>\015</>
+)PARA
+AALIGN CDATA CENTER
+(PARA
+-<\\>"</>
+)PARA
+)HELLO

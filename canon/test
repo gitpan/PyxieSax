@@ -1,0 +1,9 @@
+#
+# Test converter from ESIS to canonical XML.
+#
+
+./n2c  hello.nsgmls.esis  hello.canon.xml.n.test
+./p2c  hello.pyxie.esis   hello.canon.xml.p.test
+diff hello.canon.xml hello.canon.xml.n.test
+diff hello.canon.xml hello.canon.xml.p.test
+

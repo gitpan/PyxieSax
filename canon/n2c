@@ -1,0 +1,19 @@
+#
+# Convert ESIS of Nsgmls to canonical XML.
+#
+
+
+case $# in
+0)
+ARGS="SystemId=-"
+;;
+1)
+ARGS="SystemId=$1"
+;;
+*)
+ARGS="SystemId=$1 OutFile=$2 $3 $4 $5 $6 $7 $8 $9"
+;;
+esac
+
+
+perl canon.pl $ARGS

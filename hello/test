@@ -1,0 +1,6 @@
+#
+# Test "hello, world" version of Pyxie.
+# Get structure of document.
+#
+nsgmls hello.sgml | grep -v '^-' | (cd ../canon; ./n2c) >hello.struct.test
+diff hello.struct hello.struct.test
